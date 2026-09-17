@@ -1,14 +1,20 @@
-def contar_votos(lista_votos):
+def apurar(votos):
     resultado = {}
 
-    for votos in lista_votos:
-        if votos in resultado:
-            resultado[votos] = resultado[votos] + 1
+    for voto in votos:
+        # Sem aspas! Estamos checando a variável dicionário.
+        if voto in resultado:
+            # Atualiza apenas o placar do candidato atual
+            resultado[voto] = resultado[voto] + 1
+        
         else:
-            resultado[votos] = 1
+            # Se ele não estava no dicionário, cria a gaveta dele valendo 1
+            resultado[voto] = 1
 
     return resultado
 
-urna = ["Ana", "Carlos", "Ana", "Beatriz", "Carlos", "Ana", "Ana", "Beatriz"]
-print("=== RESULTADO DA APURACAO ===")
-print(contar_votos(urna))
+# Área de Testes
+urna = ["Ana", "Carlos", "Ana", "Beatriz", "Carlos", "Ana"]
+
+print("=== RESULTADO DA APURAÇÃO ===")
+print(apurar(urna))
