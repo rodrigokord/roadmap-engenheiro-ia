@@ -44,3 +44,27 @@ p {
   background-color: #3e322b;
   color: #faf8f5;
 }
+
+/* Regras para a nova secção abaixo da cascata */
+.conteudo-jornada {
+  /* Fundo sólido creme para tapar a cascata quando deslizar por cima */
+  background-color: #faf8f5;
+  /* Espaçamento interno gigante (80px em cima/baixo, 20px nas laterais) */
+  padding: 80px 20px;
+  /* Margem enorme no topo para empurrar este bloco lá para baixo e deixar a cascata respirar */
+  margin-top: 250px;
+}
+
+.conteudo-jornada {
+  background-color: transparent;
+  padding: 80px 20px;
+  margin-top: 250px;
+}
+
+.rodape {
+  background-color: transparent;
+  color: #7a6b63;
+  padding: 40px 20px;
+  font-size: 14px;
+  text-align: right;
+}
