@@ -1,0 +1,46 @@
+body {
+  /* 1. Cor de fundo de segurança */
+  background-color: #faf8f5;
+
+  /* 2. A película transparente + a foto da cachoeira */
+  background-image:
+    linear-gradient(rgba(250, 248, 245, 0.85), rgba(250, 248, 245, 0.85)),
+    url("https://images.unsplash.com/photo-1432405972618-c60b0225b8f9");
+
+  /* 3. Ajustes da imagem */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  margin-top: 120px;
+}
+
+h1 {
+  color: #3e322b;
+  letter-spacing: 8px;
+}
+
+p {
+  color: #7a6b63;
+  font-size: 18px;
+}
+
+/* Regra principal do botão */
+.botao-zen {
+  background-color: transparent;
+  color: #3e322b;
+  border: 1px solid #3e322b;
+  padding: 15px 40px;
+  text-decoration: none;
+  margin-top: 30px;
+  display: inline-block;
+  transition: 0.4s;
+}
+
+/* Regra de quando o mouse passa por cima (agora do lado de fora!) */
+.botao-zen:hover {
+  background-color: #3e322b;
+  color: #faf8f5;
+}
