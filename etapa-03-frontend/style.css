@@ -68,3 +68,16 @@ p {
   font-size: 14px;
   text-align: right;
 }
+
+/* Este bloco só é ativado em ecrãs com largura máxima de 768px */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+
+  .conteudo-jornada {
+    margin-top: 120px;
+    padding: 50px 20px;
+  }
+}
