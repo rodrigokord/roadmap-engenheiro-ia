@@ -41,8 +41,8 @@ p {
 
 /* Regra de quando o mouse passa por cima (agora do lado de fora!) */
 .botao-zen:hover {
-  background-color: #3e322b;
-  color: #faf8f5;
+  background-color: rgba(189, 170, 155, 0.4);
+  color: #3e322b;
 }
 
 /* Regras para a nova secção abaixo da cascata */
@@ -79,5 +79,44 @@ p {
   .conteudo-jornada {
     margin-top: 120px;
     padding: 50px 20px;
+  }
+}
+
+.circulo-respiracao {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px #c2a375;
+  margin: 40px auto; /* Centraliza o círculo no meio da tela */
+
+  /* O trio mágico para centralizar o texto EXATAMENTE no meio do círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circulo-respiracao {
+  cursor: pointer;
+  transition: all 0.5s; /* Suaviza as mudanças de cor do texto */
+}
+
+.respirando {
+  background-color: rgba(189, 170, 155, 0.4);
+  color: #3e322b;
+  animation: pulmao 6s infinite;
+}
+
+@keyframes pulmao {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(62, 50, 43, 0.5);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
