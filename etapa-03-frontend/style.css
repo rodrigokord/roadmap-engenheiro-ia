@@ -71,13 +71,9 @@ p {
 
 /* Este bloco só é ativado em ecrãs com largura máxima de 768px */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 28px;
-    letter-spacing: 4px;
-  }
-
   .conteudo-jornada {
-    margin-top: 120px;
+    /* TODO: Teste um valor entre 20px e 40px para puxar a seção e o rodapé para cima */
+    margin-top: 40px;
     padding: 50px 20px;
   }
 }
