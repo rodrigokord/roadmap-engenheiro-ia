@@ -2,16 +2,31 @@
 const meuBotao = document.querySelector(".botao-zen");
 const secaoDestino = document.querySelector(".conteudo-jornada");
 
+// 1. A nossa lista de frases zen (pode adicionar as que quiser depois!)
+const listaMantras = [
+  "Foque no agora.",
+  "Respire o caos para fora.",
+  "A sua paz é a sua prioridade.",
+  "Onde a atenção vai, a energia flui.",
+];
+
+// 2. Capturamos o local exato onde o texto vai aparecer
+const elementoMantra = document.getElementById("mantra-diario");
+
 // 2. O ouvinte aguarda o clique
 meuBotao.addEventListener("click", function (evento) {
-  // Cancela o comportamento padrão do link
   evento.preventDefault();
-
-  // 3. Muda o texto (o que você já fez com sucesso!)
   meuBotao.innerText = "JORNADA INICIADA...";
-
-  // 4. Faz a tela deslizar suavemente até a secção da cachoeira
   secaoDestino.scrollIntoView({ behavior: "smooth" });
+
+  // --- NOVA LÓGICA DO MANTRA AQUI ---
+
+  // 3. A Matemática: Sorteia um número de 0 até o tamanho total da lista
+  // A propriedade '.length' conta quantos itens existem na lista automaticamente
+  const numeroSorteado = Math.floor(Math.random() * listaMantras.length); // TODO: Escreva 'length'
+
+  // 4. Injeta o mantra na tela usando o número sorteado como chave
+  elementoMantra.innerText = listaMantras[numeroSorteado]; // TODO: Coloque a variável 'numeroSorteado' aqui dentro
 });
 
 const textoRespiracao = document.getElementById("texto-respiracao");

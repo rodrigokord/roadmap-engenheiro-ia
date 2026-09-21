@@ -116,3 +116,10 @@ p {
     transform: scale(1);
   }
 }
+
+.mantra {
+  font-style: italic;
+  color: #7a6b63;
+  margin-bottom: 20px;
+  min-height: 25px;
+}
