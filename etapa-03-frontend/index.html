@@ -21,20 +21,26 @@
     <!-- Texto que vai receber o mantra sorteado -->
     <p id="mantra-diario" class="mantra"></p>
 
+    <!-- NOVO: Campo de Foco -->
+    <input type="text" id="input-foco" class="campo-foco" placeholder="O que deseja libertar hoje?" autocomplete="off">
+
     <!-- O nosso palco para o exercício de respiração -->
     <div class="circulo-respiracao">
       <p id="texto-respiracao">Pressione para começar</p>
     </div>
 
-    <!-- O nosso palco para o exercício de respiração -->
-    <div class="circulo-respiracao">
-      <p id="texto-respiracao">Pressione para começar</p>
+    <!-- Seletor de sons ambientes -->
+    <div class="seletor-ambiente">
+      <button class="btn-som" data-som="audios/ondas.mp3">Ondas</button>
+      <button class="btn-som" data-som="audios/chuva.mp3">Chuva</button>
+      <button class="btn-som" data-som="audios/floresta.mp3">Floresta</button>
     </div>
   </section>
 
   <section class="rodape">
     <p>Desenvolvido por Kord</p>
   </section>
+
   <script src="script.js"></script>
 </body>
 
