@@ -1,20 +1,45 @@
 body {
-  /* 1. Cor de fundo de segurança */
-  background-color: #faf8f5;
-
-  /* 2. A película transparente + a foto da cachoeira */
-  background-image:
-    linear-gradient(rgba(250, 248, 245, 0.85), rgba(250, 248, 245, 0.85)),
-    url("https://images.unsplash.com/photo-1432405972618-c60b0225b8f9");
-
-  /* 3. Ajustes da imagem */
+  margin: 0;
+  padding: 0;
+  /* Mudamos a fonte padrão de todo o site para Quicksand */
+  font-family: "Quicksand", sans-serif;
+  background-image: url("fundo.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
-  font-family: "Times New Roman", Times, serif;
+  color: #3e322b;
   text-align: center;
-  margin-top: 120px;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+
+  /* O segredo: o linear-gradient cria a película branca com 75% de opacidade (0.75) antes de carregar a foto */
+  background-image:
+    linear-gradient(rgba(250, 248, 245, 0.75), rgba(250, 248, 245, 0.75)),
+    url("fundo.jpg");
+
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+
+  /* O segredo: o linear-gradient cria a película branca com 75% de opacidade (0.75) antes de carregar a foto */
+  background-image:
+    linear-gradient(rgba(250, 248, 245, 0.75), rgba(250, 248, 245, 0.75)),
+    url("fundo.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #3e322b;
+  text-align: center;
+}
+
+/* Aplicamos a Montserrat especificamente nos títulos para dar destaque */
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300; /* Deixa a letra mais fina e elegante */
+  letter-spacing: 2px; /* Espaço extra entre as letras para respirar */
 }
 
 h1 {
