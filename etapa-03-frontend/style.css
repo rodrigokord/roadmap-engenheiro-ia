@@ -197,3 +197,23 @@ p {
   opacity: 0;
   pointer-events: none;
 }
+
+/* ==========================================
+   RESUMO DA ATUALIZAÇÃO NO CSS
+   1. Escurecemos a fonte (#1a1a1a) para máximo contraste.
+   2. Deixamos a letra grossa (font-weight: 700).
+   3. Criamos uma "sombra/brilho" branca esfumaçada atrás do texto para descolar ele da cachoeira.
+   ========================================== */
+
+#mantra-diario {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* O segredo do contraste na água: brilho branco de fundo */
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+
+  /* TODO 5: Preencha a largura máxima ideal para o seu monitor (sugiro 800px, mas ajuste se quiser) */
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.6;
+}

@@ -2,7 +2,7 @@ from google import genai
 
 # 1. ATENÇÃO: Lembre-se de colocar a sua chave correta (que começa por AIza) aqui!
 # Se usar a chave "AQ...", vai dar erro de permissão novamente.
-CHAVE_API = "MINHA_CHAVE_AQUI"
+CHAVE_API = "CHAVE_ESCONDIDA"
 client = genai.Client(api_key=CHAVE_API)
 
 # 2. Simular a dor do utilizador
