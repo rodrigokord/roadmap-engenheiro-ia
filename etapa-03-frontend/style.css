@@ -1,32 +1,15 @@
+/* ==========================================
+   RESUMO DA CORREÇÃO:
+   1. Duplicações das regras 'body' e '.conteudo-jornada' removidas.
+   2. Mantido o degradê sobre a foto e o texto forte com sombra para descolar da água.
+   ========================================== */
 body {
   margin: 0;
   padding: 0;
-  /* Mudamos a fonte padrão de todo o site para Quicksand */
   font-family: "Quicksand", sans-serif;
-  background-image: url("fundo.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #3e322b;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  font-family: "Quicksand", sans-serif;
-
-  /* O segredo: o linear-gradient cria a película branca com 75% de opacidade (0.75) antes de carregar a foto */
   background-image:
     linear-gradient(rgba(250, 248, 245, 0.75), rgba(250, 248, 245, 0.75)),
     url("fundo.jpg");
-
-  margin: 0;
-  padding: 0;
-  font-family: "Quicksand", sans-serif;
-
-  /* O segredo: o linear-gradient cria a película branca com 75% de opacidade (0.75) antes de carregar a foto */
-  background-image:
-    linear-gradient(rgba(250, 248, 245, 0.75), rgba(250, 248, 245, 0.75)),
-    url("fundo.jpg");
-
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -34,12 +17,11 @@ body {
   text-align: center;
 }
 
-/* Aplicamos a Montserrat especificamente nos títulos para dar destaque */
 h1,
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300; /* Deixa a letra mais fina e elegante */
-  letter-spacing: 2px; /* Espaço extra entre as letras para respirar */
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
 h1 {
@@ -52,7 +34,6 @@ p {
   font-size: 18px;
 }
 
-/* Regra principal do botão */
 .botao-zen {
   background-color: transparent;
   color: #3e322b;
@@ -64,26 +45,21 @@ p {
   transition: 0.4s;
 }
 
-/* Regra de quando o mouse passa por cima (agora do lado de fora!) */
 .botao-zen:hover {
   background-color: rgba(189, 170, 155, 0.4);
   color: #3e322b;
 }
 
-/* Regras para a nova secção abaixo da cascata */
-.conteudo-jornada {
-  /* Fundo sólido creme para tapar a cascata quando deslizar por cima */
-  background-color: #faf8f5;
-  /* Espaçamento interno gigante (80px em cima/baixo, 20px nas laterais) */
-  padding: 80px 20px;
-  /* Margem enorme no topo para empurrar este bloco lá para baixo e deixar a cascata respirar */
-  margin-top: 250px;
-}
+/* ==========================================
+   RESUMO DA CORREÇÃO CSS:
+   1. Ajustamos a margem para telas de celular (max-width: 768px) para o conteúdo não ficar colado no topo.
+   ========================================== */
 
-.conteudo-jornada {
-  background-color: transparent;
-  padding: 80px 20px;
-  margin-top: 250px;
+@media (max-width: 768px) {
+  .conteudo-jornada {
+    margin-top: 40px;
+    padding: 50px 20px;
+  }
 }
 
 .rodape {
@@ -94,10 +70,9 @@ p {
   text-align: right;
 }
 
-/* Este bloco só é ativado em ecrãs com largura máxima de 768px */
 @media (max-width: 768px) {
   .conteudo-jornada {
-    /* TODO: Teste um valor entre 20px e 40px para puxar a seção e o rodapé para cima */
+    background-color: transparent;
     margin-top: 40px;
     padding: 50px 20px;
   }
@@ -108,17 +83,12 @@ p {
   height: 150px;
   border-radius: 50%;
   border: 1px #c2a375;
-  margin: 40px auto; /* Centraliza o círculo no meio da tela */
-
-  /* O trio mágico para centralizar o texto EXATAMENTE no meio do círculo */
+  margin: 40px auto;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.circulo-respiracao {
   cursor: pointer;
-  transition: all 0.5s; /* Suaviza as mudanças de cor do texto */
+  transition: all 0.5s;
 }
 
 .respirando {
@@ -131,12 +101,10 @@ p {
   0% {
     transform: scale(1);
   }
-
   50% {
     transform: scale(1.15);
     box-shadow: 0 0 20px rgba(62, 50, 43, 0.5);
   }
-
   100% {
     transform: scale(1);
   }
@@ -153,7 +121,7 @@ p {
   margin-top: 30px;
   display: flex;
   justify-content: center;
-  gap: 15px; /* Cria um respiro exato de 15px entre os botões */
+  gap: 15px;
 }
 
 .btn-som {
@@ -184,7 +152,7 @@ p {
   text-align: center;
   outline: none;
   font-family: inherit;
-  transition: opacity 1.5s ease; /* O segredo para desaparecer suavemente */
+  transition: opacity 1.5s ease;
 }
 
 .campo-foco::placeholder {
@@ -192,27 +160,16 @@ p {
   font-style: italic;
 }
 
-/* O JavaScript vai injetar esta classe quando o utilizador começar a respirar */
 .escondido {
   opacity: 0;
   pointer-events: none;
 }
 
-/* ==========================================
-   RESUMO DA ATUALIZAÇÃO NO CSS
-   1. Escurecemos a fonte (#1a1a1a) para máximo contraste.
-   2. Deixamos a letra grossa (font-weight: 700).
-   3. Criamos uma "sombra/brilho" branca esfumaçada atrás do texto para descolar ele da cachoeira.
-   ========================================== */
-
 #mantra-diario {
   color: #1a1a1a;
   font-size: 1.5rem;
   font-weight: 700;
-  /* O segredo do contraste na água: brilho branco de fundo */
   text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
-
-  /* TODO 5: Preencha a largura máxima ideal para o seu monitor (sugiro 800px, mas ajuste se quiser) */
   max-width: 800px;
   margin: 20px auto;
   line-height: 1.6;
